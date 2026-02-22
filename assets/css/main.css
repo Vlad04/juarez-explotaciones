@@ -2688,3 +2688,70 @@ section {
 .footer .footer-legal .credits a {
   color: var(--color-primary);
 }
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1700px !important;
+  }
+}
+
+/* --- Brand (logo + texto) SIN empujar navbar --- */
+.header .logo.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centra logo con texto */
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  /* evita empujes raros */
+  padding: 0;
+}
+
+.header .logo.brand .brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+  /* 🔥 clave */
+  margin-bottom: 0;
+  /* por si acaso */
+}
+
+.header .logo.brand .brand-mark img {
+  max-height: 70px;
+  /* controla tamaño aquí */
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Texto: pegado pero legible */
+.header .logo.brand h1 {
+  margin: 5px 0 0 0;
+  /* poquito espacio entre logo y texto */
+  font-size: 18px;
+  /* puedes subir a 20 si quieres */
+  line-height: 1.1;
+  color: #fff;
+}
+
+/* --- Ajuste para móviles --- */
+@media (max-width: 991px) {
+  .header .logo.brand .brand-mark {
+    height: 36px;
+    /* un poquito más pequeño en móvil */
+    width: 54px;
+  }
+
+  .header .logo.brand h1 {
+    font-size: 16px;
+  }
+}
